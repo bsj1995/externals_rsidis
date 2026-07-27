@@ -1,3 +1,1 @@
-# externals_rsidis
-Version of externals_all used for XEM2 analysis and R-SIDIS. Uses F1F2IN21_v1.0 (courtesy Eric Christy) for p and d with a fit to the EMC effect for the inleastic cross section.
-Uses F1F209 (superscaling) for QE model.
+Version of externals_all used for XEM2 analysis and R-SIDIS. Uses F1F2IN21_v1.0 (courtesy Eric Christy) for p and d with a fit to the EMC effect for the inleastic cross section. Uses F1F209 (superscaling) for QE model.
