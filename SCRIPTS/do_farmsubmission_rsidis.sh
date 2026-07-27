@@ -12,7 +12,8 @@ swif2 cancel externals_${name}_${targ} -delete
 cd ..
 set mydir=$PWD
 echo "cd ${mydir}" >! dir_file.txt
-cat dir_file.txt run_extern >! run_extern_farm 
+cat dir_file.txt run_extern >! run_extern_farm
+chmod a+x run_extern_farm
 cd SCRIPTS
 
 ./make_input_files.sh $ebeam $targ $min_angle $num_angle $name
