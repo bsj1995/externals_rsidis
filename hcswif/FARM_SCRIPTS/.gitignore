@@ -1,0 +1,10 @@
+# ignore patterns
+
+*~
+# Objects and executable
+*.o
+*.d
+*.inp
+*.sh
+externals_all
+a.out
