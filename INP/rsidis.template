@@ -1,0 +1,6 @@
+input files for EXTERNAL: runplan/target/output
+RUNPLAN/<ebeam>gev_th_<angle>deg.inp
+TARG/targ.<targ>
+OUT/<ebeam>gev_<angle>_<targ>_details.out
+
+
