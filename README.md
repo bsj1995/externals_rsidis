@@ -52,6 +52,7 @@ Before submitting multiple jobs to the batch farm, you can test a minimal config
    ./make_input_files.sh <ebeam> <targ> <min_angle> <num_angle> <workflow_name>
    ```
 Here, note that this script assumes the angular grid bins have width 0.2 degrees, which must be reflected in the make_grid/a.out execution. Moreover, for the target, the expected input is just the file extension, e.g. h2cryo26_hms, not the full file name, e.g. targ.h2cryo26_hms.
+
 4. **Run the Test:** Execute the test locally using:
 ```bash
 ./run_extern <infile_name>
