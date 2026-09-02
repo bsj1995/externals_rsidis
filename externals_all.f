@@ -1459,17 +1459,16 @@ c        TAAL = 0.00495 * cryo_cm / cell_diam +wall_cm/8.9 + TSPEC
       ENDIF
 
 
-! Now try to do the upstream wall of the dummy
+! Now try to do the downstream foil of the dummy
       IF(INDEX(TARGET,'DUMMYDN').GT.0) THEN ! DOWNSTREAM DUMMMY SLAB
          TBEFOR = t
          TAFTER=(ttarg-t)/cos(thr)       ! target/cos(th)
-         TBAL = ttarg +TBEAM   ! always goes through upstream slab, here I assume
-                        ! both slabs are the same thickness
+         TBAL = TBEAM       ! need to define upstream foil radlen in targ.xx file
          TAAL = TSPEC
 c         write(6,*) 'cheesy poofs ',TARGET,TBAL,TAAL,TBEFOR,TAFTER
       endif
 
-! Now do the upstream slab of the dummy. This is trickier
+! Now do the upstream foil of the dummy. This is trickier
       IF(INDEX(TARGET,'DUMMYUP').GT.0) THEN ! UPSTREAM DUMMMY SLAB
          TBEFOR = t
          TAFTER=(ttarg-t)/cos(thr)       ! target/cos(th)
@@ -1478,7 +1477,7 @@ C 6 GeV
 c         limit = 0.45 + 2.54   ! dummy is 2 inches wide, beam was offset 0.45 cm
 c         dx = 3.935*tan(thr)   ! scattered electron position at downstream face
 C 12 GeV
-         limit = 0.5*2.54/2.0   ! dummy is 0.5 inches wide, beam was offset
+         limit = 0.5*2.54/2.0   ! dummy is 0.5 inches wide
          dx = 10.0*tan(thr)   ! scattered electron position at downstream face
          if(dx.lt.limit) then !does it go through downstream slab
             TAAL = ttarg/cos(thr) + TSPEC ! assumes DS slab same thickness as US
